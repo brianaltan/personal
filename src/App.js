@@ -10,7 +10,7 @@ const App = () => {
         <Navbar />
         <h1 style={{ fontSize: 35, marginTop: 20, textAlign: 'center'}}>Hi! I am Brian Altan👋</h1>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/personal" element={<Home />} />
         </Routes>
         <footer style={styles.footer}>
           <p>© 2024 Brian Altan</p>
