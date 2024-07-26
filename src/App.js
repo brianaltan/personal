@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './Home';
+import Navbar from './Navbar';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Navbar />
+        <h1 style={{ fontSize: 35, marginTop: 20, textAlign: 'center'}}>Hi! I am Brian Altan👋</h1>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+        <footer style={styles.footer}>
+          <p>© 2024 Brian Altan</p>
+        </footer>
+      </div>
+    </Router>
   );
-}
+};
+
+const styles = {
+  footer: {
+    bottom: 0,
+    width: '100%',
+    textAlign: 'center',
+    backgroundColor: '#f1f1f1',
+    padding: '10px 0',
+    fontSize: '16px',
+  },
+};
 
 export default App;
